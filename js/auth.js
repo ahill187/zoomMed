@@ -35,10 +35,10 @@ export var logOff = () => firebase.auth().signOut().then(function() {
     console.log("sign out error:", errorCode, errorMessage)
 });
 
-export var getProfile = () => {
+window.getProfileData = () => {
     let user = firebase.auth().currentUser
     if (user) {
-        console.log(user)
+			return user.email
     } else {
         console.log("not logged in")
     }
