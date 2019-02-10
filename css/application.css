@@ -4,10 +4,10 @@
 :root {
     --color-a: #2EC4B6;
     --color-b: #FF6666;
-    --color-c: #CCFF66;
-    --color-d: #4C88C7;
+    --color-d: #392B58;
+    --color-c: #99D5C9;
     --color-b-light: #8FE9F7;
-    --color-c-light: #d4f298;
+    --color-c-light: #99D5C9;
     --color-b-transparent: rgba(143,233,247,0.5);
     --color-a-opqaue: rgba(255,89, 146, 1);
     --color-a-transparent: rgba(255, 89,146, 0.14);
@@ -169,4 +169,14 @@ p {
     color: #fff;
     background: none;
 }
+
+#map {
+     height: 500px;
+     width: 500px;
+ }
+.btn-primary {
+    background-color: var(--color-d) !important;
+}
+
+
 

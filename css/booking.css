@@ -1,12 +1,13 @@
 :root {
     --color-a: #2EC4B6;
     --color-b: #FF6666;
+    --color-d: #392B58;
+    --color-c: #99D5C9;
     --color-b-light: #8FE9F7;
+    --color-c-light: #99D5C9;
     --color-b-transparent: rgba(143,233,247,0.5);
     --color-a-opqaue: rgba(255,89, 146, 1);
     --color-a-transparent: rgba(255, 89,146, 0.14);
-    --color-c: #CCFF66;
-    --color-d: #5D2E8C;
     --color-e: #4CDEF5;
     --grey-transparent: rgba(211, 211, 211, 0.3);
     --text-color-dark: rgb(50,50,50);
@@ -14,4 +15,11 @@
 
 h1 {
     color: var(--color-d);
+}
+.card.symptoms .card-header {
+    color: white;
+    background-color: var(--color-d);
+}
+.btn-primary.booking {
+    background-color: var(--color-d);
 }
