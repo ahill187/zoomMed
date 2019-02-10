@@ -18,5 +18,6 @@ window.pushPatientData = (id, msp, sy, hl) => {
 }
 
 document.getElementById("booking-submit").addEventListener("click", function() {
+	console.log(result)
 	pushPatientData(result.insurance, result.symptoms, result.address);
 }, false);
