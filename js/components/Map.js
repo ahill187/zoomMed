@@ -82,9 +82,32 @@ export const initGoogleMaps = () => {
 			infoWindowZen.open(map, markerZen)
 		})
 		
-		var infoWindowBaysw = new google.maps.InfoWindow({content: `<button type="button">Click Me!</button>`})
+		var infoWindowBaysw = new google.maps.InfoWindow({content: `<strong>Dr. Dalton Nicholl</strong> |
+		Gender: Male | Hours: 9:00am-2:00pm | Est. Wait Time: 5 mins <br> <strong>Dr. Kristi Tuttle</strong>| Gender: Female | Hours: 11:00am-4:00pm | Est. Wait Time: 8 mins
+	   <button type="button">Click Me!</button>`})
 		markerBaysw.addListener('click', function(){
 			infoWindowBaysw.open(map, markerBaysw)
+		})
+
+		var infoWindowMSK = new google.maps.InfoWindow({content: `<strong>Dr. Glynda Caulfield</strong> |
+		Gender: Female | Hours: 10:00am-5:00pm | Est. Wait Time: 10 mins <br> <strong>Dr. Alvis Alonso</strong>| Gender: Male | Hours: 9:00am-3:00pm | Est. Wait Time: 5 mins
+	   <button type="button">Click Me!</button>`})
+		markerMSK.addListener('click', function(){
+			infoWindowMSK.open(map, markerMSK)
+		})
+
+		var infoWindowConnect = new google.maps.InfoWindow({content: `<strong>Dr. Grant Leitman</strong> |
+		Gender: Male | Hours: 8:00am-2:00pm | Est. Wait Time: 5 mins <br> <strong>Dr. Cassie Yeats</strong>| Gender: Female | Hours: 12:00pm-6:00pm | Est. Wait Time: 15 mins
+	   <button type="button">Click Me!</button>`})
+		markerConnect.addListener('click', function(){
+			infoWindowConnect.open(map, markerConnect)
+		})
+
+		var infoWindowWELL = new google.maps.InfoWindow({content: `<strong>Dr. Bill Pechet</strong> |
+		Gender: Male | Hours: 2:00pm-8:00pm | Est. Wait Time: 20 mins <br> <strong>Dr. Kees Lokman</strong>| Gender: Male | Hours: 5:00pm-9:00pm | Est. Wait Time: 15 mins
+	   <button type="button">Click Me!</button>`})
+		markerWELL.addListener('click', function(){
+			infoWindowWELL.open(map, markerWELL)
 		})
 		
 	}
