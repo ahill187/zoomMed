@@ -6,6 +6,7 @@ import { h, app } from 'hyperapp'
 import { CONFIG } from './config'
 import { addToDb } from './database'
 import { initMap } from './components/Map'
+import Account from './accounts'
 
 firebase.initializeApp(CONFIG)
 
@@ -13,8 +14,11 @@ window.db = firebase.firestore()
 
 window.dbAdd = addToDb
 
-window.initMap = console.log(google)
-
+window.initMap = () => { 
+	if (!google) { 
+		console.log("google not present, restart") 
+	} 
+}
 const state = {
 	count: 0,
 	mapping: false,
@@ -35,6 +39,7 @@ const actions = {
 }
 
 window.loadMap = actions.loadMap
+
 
 const view = (state, actions) => (
 	<div>
