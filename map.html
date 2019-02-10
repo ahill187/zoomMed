@@ -47,11 +47,10 @@
         var markerConnect = new google.maps.Marker({position: ConnectClinic, icon: clinicMarker, map: map});
         var markerWELL = new google.maps.Marker({position: WELLClinic, icon: clinicMarker, map: map});
 
-        var infoWindow = new google.maps.infoWindow({content: 'hellopls'})
+        var infoWindow = new google.maps.InfoWindow({content: '<button type="button">Click Me!</button>'})
         markerZen.addListener('click', function(){
           infoWindow.open(map, markerZen)
         })
-
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAC2Mm19UyAyXbAVE6YW5t87ATyv41p9iU&callback=initMap"

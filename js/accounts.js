@@ -1,4 +1,35 @@
-function register(type, name, email, password) 
+function registerUser(Fname, Lname, email, gender, password, 
+    symptoms, insurance, homeLoc) 
+{
+    let userAccount = {
+        firstName: Fname,
+        lastName: Lname,
+        gender: gender,
+        insured: insurance,
+        symptom: symptoms,
+        homeLocation: homeLoc
+    }
+
+    db.collection("patients").doc(email).get()
+	.then(doc => {
+		if (doc.exists) {
+			console.log("already exists")
+		} else {
+			db.collection("patients").doc(email).set(
+                userAccount
+            )
+			.then(docRef => {
+				console.log("Document written with ID: ", docRef.id);
+			})
+			.catch(error => {
+				console.error("Error adding document: ", error);
+			})
+		}
+	})
+	.catch(err => console.log(err))
+}
+
+function registerClinic(name, email, password) 
 {
     let account = {
         Name = name,
@@ -6,13 +37,6 @@ function register(type, name, email, password)
         Password = password
     }
 
-    if (type === 'clinic') 
-    {
-        // add account to list of clinics
-    } else if (type === 'patient')
-    {
-        // add account to patient list, have to handle FName, LName
-    }
 }
 
 function setOpenhours(sTime, fTime, clinic)
