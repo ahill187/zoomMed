@@ -56,13 +56,13 @@
                 <legend class="col-form-label col-sm-2 pt-0">Are you covered by MSP?</legend>
                 <div class="col-sm-10">
     <div class="form-check">
-        <input class="form-check-input" type="radio" name="insurance" id="insurance-no" value="no">
+        <input class="form-check-input" type="radio" name="insurance" id="insurance-no" value="false">
         <label class="form-check-label" for="insurance-no">
             No
         </label>
     </div>
         <div class="form-check">
-        <input class="form-check-input" type="radio" name="insurance" id="insurance-yes" value="yes" checked>
+        <input class="form-check-input" type="radio" name="insurance" id="insurance-yes" value="true" checked>
         <label class="form-check-label" for="insurance-yes">
             Yes
         </label>
@@ -104,16 +104,16 @@
     <div class="card symptoms">
         <h5 class="card-header">Current Location</h5>
         <div class="card-body">
-<form>
+<form id="address">
             <div class="form-row">
                 <div class="col-md-4 mb-3">
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="Apt/Suite" value="" required>
+                    <input type="text" class="form-control" id="suite" placeholder="Apt/Suite" value="" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
                 <div class="col-md-4 mb-3">
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Street Number" value="" required>
+                    <input type="text" class="form-control" id="street" placeholder="Street Number" value="" required>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
@@ -121,19 +121,19 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <input type="text" class="form-control" id="validationCustom03" value="Vancouver" placeholder="City" required>
+                    <input type="text" class="form-control" id="city" value="Vancouver" placeholder="City" required>
                     <div class="invalid-feedback">
                         Please provide a valid city.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <input type="text" class="form-control" id="validationCustom04" value="BC" placeholder="Province" required>
+                    <input type="text" class="form-control" id="province" value="BC" placeholder="Province" required>
                     <div class="invalid-feedback">
                         Please provide a valid state.
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <input type="text" class="form-control" id="validationCustom05" placeholder="Postal Code" required>
+                    <input type="text" class="form-control" id="postal-code" placeholder="Postal Code" required>
                     <div class="invalid-feedback">
                         Please provide a valid zip.
                     </div>
@@ -163,7 +163,7 @@
         </script>
         <div class="form-group row">
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary booking" value="Submit" onclick="">
+                <button type="submit" id="booking-submit" class="btn btn-primary booking" value="Submit">
                     <a href="./patient_clinics.html">Submit</a></button>
             </div>
         </div>
