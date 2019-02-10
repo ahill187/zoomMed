@@ -16,37 +16,51 @@ export const initGoogleMaps = () => {
 		)
 	}
 	
-	export var initMap = async (db, google) => {	
+	export var initMap = async (db, google, patient) => {	
 		// Zen Clinic Load
 		var zenClinic = db.collection("clinics").doc('zenclinic1234567@gmail.com')
 		let doc = await zenClinic.get()
-		if (doc.exists) {
-			var zenClinic = doc.data()
-		}
+		if (doc.exists) { var zenClinic = doc.data()}
 		var zenLoc = {lat: zenClinic.location._lat, lng: zenClinic.location._long}
+		
 		
 		var getem = await db.collection("clinics").get()
 		console.log(getem)
 		for (doc in getem) {
 			console.log(doc)
 		}
-
-
-
+		
+		
 		// Bayswater Clinic Load
 		var baysClinic = db.collection("clinics").doc('bayswaterclinicals@gmail.com')
 		doc = await baysClinic.get()
-		if (doc.exists) {
-			var baysClinic = doc.data()
-		}
+		if (doc.exists) { var baysClinic = doc.data()}
 		var baysLoc = {lat: baysClinic.location._lat, lng: baysClinic.location._long}
+		
+		
+		// MSK Clinic Load
+		var MSKClinic = db.collection("clinics").doc('mskmedicals@gmail.com')
+		doc = await MSKClinic.get()
+		if (doc.exists) { var MSKClinic = doc.data()}
+		var MSKLoc = {lat: MSKClinic.location._lat, lng: MSKClinic.location._long}
+		
+		
+		// Connect Clinic Load
+		var ConnClinic = db.collection("clinics").doc('connectingclinics@gmail.com')
+		doc = await ConnClinic.get()
+		if (doc.exists) { var ConnClinic = doc.data()}
+		var ConnLoc = {lat: ConnClinic.location._lat, lng: ConnClinic.location._long}
+		
 
+		// WELL Clinic Load
+		var WELLClinic = db.collection("clinics").doc('wellnessclinicalisms@gmail.com')
+		doc = await WELLClinic.get()
+		if (doc.exists) { var WELLClinic = doc.data()}
+		var WELLLoc = {lat: WELLClinic.location._lat, lng: WELLClinic.location._long}
+		
 
 		var startloc = {lat: 49.264219, lng: -123.168874}
-
-		var MSKClinic = {lat: 49.268163, lng: -123.170301}
-		var ConnectClinic = {lat: 49.257293, lng: -123.167636}
-		var WELLClinic = {lat: 49.263690, lng: -123.211498}
+		
 		var map;
 		var clinicMarker = require('../../assets/symbolsmol.png')//'assets/symbol.png'
 		var map = new google.maps.Map(document.getElementById('map'), {
@@ -60,9 +74,9 @@ export const initGoogleMaps = () => {
 		})
 		var markerZen = new google.maps.Marker({position: zenLoc, icon: clinicMarker, map: map, title: 'Zen Clinic'});
 		var markerBaysw = new google.maps.Marker({position: baysLoc, icon: clinicMarker, map: map});
-		var markerMSK = new google.maps.Marker({position: MSKClinic, icon: clinicMarker, map: map});
-		var markerConnect = new google.maps.Marker({position: ConnectClinic, icon: clinicMarker, map: map});
-		var markerWELL = new google.maps.Marker({position: WELLClinic, icon: clinicMarker, map: map});
+		var markerMSK = new google.maps.Marker({position: MSKLoc, icon: clinicMarker, map: map});
+		var markerConnect = new google.maps.Marker({position: ConnLoc, icon: clinicMarker, map: map});
+		var markerWELL = new google.maps.Marker({position: WELLLoc, icon: clinicMarker, map: map});
 		
 		var infoWindow = new google.maps.InfoWindow({content: '<button type="button">Click Me!</button>'})
 		markerZen.addListener('click', function(){
