@@ -3,6 +3,8 @@ import * as firebase from 'firebase'
 import * as fb from 'firebase/app'
 import 'firebase/firestore'
 
+firebase.initializeApp(CONFIG);
+
 
 export var addToDb = (db, collection, id, data) => {
 	db.collection(collection).doc(id).get()

@@ -8,10 +8,8 @@ window.db = firebase.firestore()
 
 console.log("let's roll")
 
-window.pushPatientData = (id, fn, ln, msp, sy, hl) => {
+window.pushPatientData = (id, msp, sy, hl) => {
 	addToDb(window.db, "patients", id, {
-		firstName: fn,
-		lastName: ln,
 		insured: msp,
 		symptoms: sy,
 		homeLocation: hl // geocode this!!
