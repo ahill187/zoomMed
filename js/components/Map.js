@@ -66,7 +66,7 @@ export const initGoogleMaps = () => {
 		})
 		var marker = new google.maps.Marker({
 			position: startloc,
-			icon: 'https://maps.google.com/mapfiles/kml/shapes/man.png' ,
+			icon: '../../assets/personformap.png' ,
 			map: map
 		})
 		var markerZen = new google.maps.Marker({position: zenLoc, icon: clinicMarker, map: map, title: 'Zen Clinic'});
@@ -75,12 +75,18 @@ export const initGoogleMaps = () => {
 		var markerConnect = new google.maps.Marker({position: ConnLoc, icon: clinicMarker, map: map});
 		var markerWELL = new google.maps.Marker({position: WELLLoc, icon: clinicMarker, map: map});
 		
-		var infoWindowZen = new google.maps.InfoWindow({content: '<button type="button">Click Me!</button>'})
+		var infoWindowZen = new google.maps.InfoWindow({content: `<div><strong>Dr. Danny Devita</strong>
+		Gender: Male
+		Hours: 11:00am-6:00pm </div>
+		<div><strong>Dr. Donkey Kong</strong>
+		Gender: Male
+		Hours: 3:00pm-6:00pm </div>
+		<button type="button">Click Me!</button>`})
 		markerZen.addListener('click', function(){
 			infoWindowZen.open(map, markerZen)
 		})
 		
-		var infoWindowBaysw = new google.maps.InfoWindow({content: '<button type="button">Click Me!</button>'})
+		var infoWindowBaysw = new google.maps.InfoWindow({content: `<button type="button">Click Me!</button>`})
 		markerBaysw.addListener('click', function(){
 			infoWindowBaysw.open(map, markerBaysw)
 		})

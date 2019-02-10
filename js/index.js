@@ -6,6 +6,7 @@ import { h, app } from 'hyperapp'
 import { CONFIG } from './config'
 import { addToDb } from './database'
 import { initMap } from './components/Map'
+import { dateConvert } from './util'
 
 firebase.initializeApp(CONFIG)
 
@@ -13,8 +14,11 @@ window.db = firebase.firestore()
 
 window.dbAdd = addToDb
 
-window.initMap = console.log(google)
-
+window.initMap = () => { 
+	if (!google) { 
+		console.log("google not present, restart") 
+	} 
+}
 const state = {
 	count: 0,
 	time: -1,
@@ -38,17 +42,21 @@ const actions = {
 
 window.loadMap = actions.loadMap
 
+
 const view = (state, actions) => (
 	<div>
 		<p>bizza</p>
 		{state.count}
-		{state.time}
+		{state.time}	
 		<button onclick={() => actions.down()}>ー</button>
 		<button onclick={() => actions.up()}>＋</button>
 		<button onclick={() => actions.map()}>map</button>
 		<button onclick={() => actions.setTime(Date.now)}>Set Time</button>
 		<div id="map"></div>
 	</div>
-)
+	)
+
+	// var newTime = dateConvert(state.time)
+	// console.log(newTime)
 
 app(state, actions, view, document.body)
