@@ -66,7 +66,7 @@ export const initGoogleMaps = () => {
 		})
 		var marker = new google.maps.Marker({
 			position: startloc,
-			icon: 'https://maps.google.com/mapfiles/kml/shapes/man.png' ,
+			icon: '../../assets/personformap.png' ,
 			map: map
 		})
 		var markerZen = new google.maps.Marker({position: zenLoc, icon: clinicMarker, map: map, title: 'Zen Clinic'});
