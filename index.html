@@ -1,67 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>zoomMed</title>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8cVX0QiIum-7ZPAVLS2Lh1fHPUNVeekA&callback=actions.loadMap" async defer></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 500px;
-        width: 500px;
-      }
-    </style>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>zoomMed</title>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8cVX0QiIum-7ZPAVLS2Lh1fHPUNVeekA&callback=actions.loadMap" async defer></script>
+		<style>
+/* Always set the map height explicitly to define the size of the div
+ * element that contains the map. */
+#map {
+	height: 500px;
+	width: 500px;
+}
+		</style>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	</head>
 
-<body>
-  <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+	<body class="text-center">
+		<script src="js/index.js"></script>
+		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+			<header class="masthead mb-auto">
+				<div class="inner">
+					<h3 class="masthead-brand">Cover</h3>
+					<nav class="nav nav-masthead justify-content-center">
+						<a class="nav-link active" href="#">Home</a>
+						<a class="nav-link" href="#">Features</a>
+						<a class="nav-link" href="#">Contact</a>
+					</nav>
+				</div>
+			</header>
 
-  <main role="main" class="inner cover">
-    <h1 class="cover-heading">Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-    </p>
-  </main>
+			<main role="main" class="inner cover">
+				<h1 class="cover-heading">Cover your page.</h1>
+				<p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+				<p class="lead">
+					<a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+				</p>
+			</main>
 
-  <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-    </div>
-  </footer>
+			<footer class="mastfoot mt-auto">
+				<div class="inner">
+					<p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+				</div>
+			</footer>
 
 
-	<nav>
-		<a href="./index.html"> Home </a>
-		<a href="./booknow.html"> Book now </a>
-		<a href="./login.html"> Log In </a>
-		<a href="./contact.html"> Contact </a>
-	</nav>
-			
-<h1>Welcome to ZOOMED</h1>
+			<nav>
+				<a href="./index.html"> Home </a>
+				<a href="./booknow.html"> Book now </a>
+				<a href="./login.html"> Log In </a>
+				<a href="./contact.html"> Contact </a>
+			</nav>
 
-<p>Our website will help you to streamline the proccess of receiving responsive medical treatment. <br> Through our application, we will help you find walk-in practioners and emergency healthcare providers within your proximity, as well as the approximated wait times.<br> By informing the clients, we aim to bring accessibility and comfort to our users! </p>
+			<h1>Welcome to ZOOMED</h1>
 
-	<p>Dab on a <a href="map.html">Map</a> ?</p>
+			<p>Our website will help you to streamline the proccess of receiving responsive medical treatment. <br> Through our application, we will help you find walk-in practioners and emergency healthcare providers within your proximity, as well as the approximated wait times.<br> By informing the clients, we aim to bring accessibility and comfort to our users! </p>
 
 
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-</body>
+			<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	</body>
 </html>
