@@ -16,11 +16,11 @@ export const initGoogleMaps = () => {
 		if (doc.exists) { var zenClinic = doc.data()}
 		var zenLoc = {lat: zenClinic.location._lat, lng: zenClinic.location._long}
 		
-		// var getem = await db.collection("clinics").get()
-		// console.log(getem)
-		// for (doc in getem) {
-		// 	console.log(doc)
-		// }
+		var getem = await db.collection("clinics").get()
+		console.log(getem)
+		for (doc in getem) {
+			console.log(doc)
+		}
 
 		var gotem = await db.collection("patients").get()
 		console.log(gotem)
@@ -62,11 +62,11 @@ export const initGoogleMaps = () => {
 		var clinicMarker = require('../../assets/symbolsmol.png')//'assets/symbol.png'
 		var map = new google.maps.Map(document.getElementById('map'), {
 			center: startloc,
-			zoom: 15
+			zoom: 14
 		})
 		var marker = new google.maps.Marker({
 			position: startloc,
-			icon: '../../assets/personformap.png' ,
+			icon: require('../../assets/personsmol.png'),
 			map: map
 		})
 		var markerZen = new google.maps.Marker({position: zenLoc, icon: clinicMarker, map: map, title: 'Zen Clinic'});
@@ -75,12 +75,11 @@ export const initGoogleMaps = () => {
 		var markerConnect = new google.maps.Marker({position: ConnLoc, icon: clinicMarker, map: map});
 		var markerWELL = new google.maps.Marker({position: WELLLoc, icon: clinicMarker, map: map});
 		
-		var infoWindowZen = new google.maps.InfoWindow({content: `<div><strong>Dr. Danny Devita</strong>
+		var infoWindowZen = new google.maps.InfoWindow({content: `<strong>Dr. Danny Devita</strong>
 		Gender: Male
-		Hours: 11:00am-6:00pm </div>
-		<div><strong>Dr. Donkey Kong</strong>
+		Hours: 11:00am-6:00pm \ <strong>Dr. Donkey Kong</strong>
 		Gender: Male
-		Hours: 3:00pm-6:00pm </div>
+		Hours: 3:00pm-6:00pm
 		<button type="button">Click Me!</button>`})
 		markerZen.addListener('click', function(){
 			infoWindowZen.open(map, markerZen)
