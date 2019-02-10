@@ -1,10 +1,11 @@
 import { CONFIG } from './config'
 import * as firebase from 'firebase'
 
-firebase.initializeApp(CONFIG);
+
+//firebase.initializeApp(CONFIG);
 
 // create user test
-window.createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassword(email, pass)
+export var createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassword(email, pass)
     .then(() => console.log("created new user", email))
     .catch(function(error) {
     // Handle Errors here.
@@ -15,7 +16,7 @@ window.createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassw
 
 // login user test
 
-window.logIn = (email, pass) => firebase.auth().signInWithEmailAndPassword(email, pass)
+export var logIn = (email, pass) => firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(() => console.log("logged into", email))
     .catch(function(error) {
     // Handle Errors here.
@@ -26,7 +27,7 @@ window.logIn = (email, pass) => firebase.auth().signInWithEmailAndPassword(email
 
 // log off
 
-window.logOff = () => firebase.auth().signOut().then(function() {
+export var logOff = () => firebase.auth().signOut().then(function() {
     console.log("gone done and signed out")
 }).catch(function(error) {
     var errorCode = error.code;
@@ -34,7 +35,7 @@ window.logOff = () => firebase.auth().signOut().then(function() {
     console.log("sign out error:", errorCode, errorMessage)
 });
 
-window.getProfile = () => {
+export var getProfile = () => {
     let user = firebase.auth().currentUser
     if (user) {
         console.log(user)
