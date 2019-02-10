@@ -7,7 +7,7 @@
 
 <body>
   <nav>
-    <a href="./medical-home.html"> Home </a>
+    <a href="./medical-index.html"> Home </a>
     <a href="./medical-booknow.html"> Book now </a>
     <a href="./medical-contact.html"> Contact </a>
 </nav>
@@ -18,11 +18,16 @@
 <form action="/bookingform.html" method="POST">
     <h1>Symptoms</h1>
         <p>The entries will be used by practioners to promptly assess your condition.</p>
-          <label for="painlevel">On a scale, how much pain are you feeling?</label>
-          <br>
-          <span>Low</span>
-            <input type="range" name="painlevel" id="painlevel" min="0" max="5" step="0.5">
-          <span>High</span>
+    </br>
+      <label for="symptoms">Please list the symptoms you are experiencing.</label>
+    </br>
+       <input type="text" name="symptoms" id="symptoms">
+      <label for="insurance">Are you covered by insurance?</label>
+        <input type="radio" name="insurance" id="insurance" value="yes">
+      <label for="yes">Yes</label>
+        <input type="radio" name="insurance" id="insurance" value="no">
+      <label for="no">No</label>
+    </br>
 
     <h1>Practioners</h1>
       <p>The entries will be used to match you to a optimal and preferred health care provider.</p>
@@ -34,6 +39,10 @@
           <label for="male">Male</label>
         <input type="radio" name="p-gender" id="p-gender" value="nopref">
           <label for="nopref">No Preference</label>
+    </br>
+        <label for="currentlocation">Where is your current Location:</label>
+    <input type="text" name="currentlocation" id="currentlocation">
+          
 
 
 </form>
