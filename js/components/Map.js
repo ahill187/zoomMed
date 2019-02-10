@@ -1,6 +1,5 @@
 import {h, app} from 'hyperapp'
-
-
+import {geoConv} from '../util.js'
 
 export const initGoogleMaps = () => {
 	console.log("initting the maps of the google")
