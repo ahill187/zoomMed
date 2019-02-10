@@ -1,7 +1,8 @@
 import { CONFIG } from './config'
 import * as firebase from 'firebase'
 
-firebase.initializeApp(CONFIG);
+
+//firebase.initializeApp(CONFIG);
 
 // create user test
 export var createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassword(email, pass)
