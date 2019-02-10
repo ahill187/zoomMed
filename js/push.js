@@ -8,7 +8,7 @@ window.db = firebase.firestore()
 
 console.log("let's roll")
 
-window.pushPatientData = (id, fn, ln, msp, sy, hl) => {
+export var pushPatientData = (id, fn, ln, msp, sy, hl) => {
 	addToDb(window.db, "patients", id, {
 		firstName: fn,
 		lastName: ln,
@@ -17,3 +17,7 @@ window.pushPatientData = (id, fn, ln, msp, sy, hl) => {
 		homeLocation: hl // geocode this!!
 	})
 }
+
+document.getElementById("booking-submit").addEventListener("click", function() {
+	pushPatientData(result.insurance, result.symptoms, result.address);
+}, false);
