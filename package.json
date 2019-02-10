@@ -10,8 +10,10 @@
     "start": "parcel index.html"
   },
   "dependencies": {
+    "bulma": "^0.7.4",
     "electron": "^4.0.4",
     "firebase": "^5.8.2",
+    "firebaseui": "^3.5.2",
     "hyperapp": "^1.2.9"
   },
   "devDependencies": {
