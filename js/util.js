@@ -6,6 +6,7 @@ export const dateConvert = (time) => {
 export function geoConv(address) {
     var str = address
     var res = str.replace(/ /g, "+");
-    console.log(res)
+    res = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + res +  '&key=AIzaSyA8cVX0QiIum-7ZPAVLS2Lh1fHPUNVeekA'
+    return res
 }
 
