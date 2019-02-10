@@ -18,6 +18,7 @@ window.initMap = () => {
 	if (!google) { 
 		console.log("google not present, restart") 
 	} 
+	initMap(firebase.firestore(), google)
 }
 const state = {
 	count: 0,
@@ -44,19 +45,12 @@ window.loadMap = actions.loadMap
 
 
 const view = (state, actions) => (
-	<div>
-		<p>bizza</p>
-		{state.count}
-		{state.time}	
-		<button onclick={() => actions.down()}>ー</button>
-		<button onclick={() => actions.up()}>＋</button>
-		<button onclick={() => actions.map()}>map</button>
-		<button onclick={() => actions.setTime(Date.now)}>Set Time</button>
-		<div id="map"></div>
-	</div>
+		<div id="map">
+			{ initMap(firebase.firestore(), google) }
+		</div>
 	)
 
 	// var newTime = dateConvert(state.time)
 	// console.log(newTime)
 
-app(state, actions, view, document.body)
+app(state, actions, view, document.getElementById("fitter"))
