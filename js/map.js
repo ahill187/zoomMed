@@ -13,9 +13,9 @@ var ConnectClinic = {lat: 49.257293, lng: -123.167636}
 var WELLClinic = {lat: 49.263690, lng: -123.211498}
 var map;
 var clinicMarker = 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png'
-;
-(() => {
-  map = new google.maps.Map(document.getElementById('map'), {
+
+window.initMap = () => {
+  var map = new google.maps.Map(document.getElementById('map'), {
     center: startloc,
     zoom: 15
   })
@@ -34,4 +34,4 @@ var clinicMarker = 'http://maps.google.com/mapfiles/kml/shapes/hospitals.png'
   markerZen.addListener('click', function(){
     infoWindow.open(map, markerZen)
   })
-})()
+}
