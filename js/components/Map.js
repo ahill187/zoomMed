@@ -75,11 +75,8 @@ export const initGoogleMaps = () => {
 		var markerConnect = new google.maps.Marker({position: ConnLoc, icon: clinicMarker, map: map});
 		var markerWELL = new google.maps.Marker({position: WELLLoc, icon: clinicMarker, map: map});
 		
-		var infoWindowZen = new google.maps.InfoWindow({content: `<strong>Dr. Danny Devita</strong>
-		Gender: Male
-		Hours: 11:00am-6:00pm \ <strong>Dr. Donkey Kong</strong>
-		Gender: Male
-		Hours: 3:00pm-6:00pm
+		var infoWindowZen = new google.maps.InfoWindow({content: `<strong>Dr. Danny Devita</strong> |
+		 Gender: Male | Hours: 11:00am-6:00pm | Est. Wait Time: 10 mins <br> <strong>Dr. Donkey Kong</strong>| Gender: Male | Hours: 3:00pm-6:00pm | Est. Wait Time: 16 mins
 		<button type="button">Click Me!</button>`})
 		markerZen.addListener('click', function(){
 			infoWindowZen.open(map, markerZen)
