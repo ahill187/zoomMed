@@ -2,10 +2,10 @@ import { CONFIG } from './config'
 import * as firebase from 'firebase'
 
 
-//firebase.initializeApp(CONFIG);
+firebase.initializeApp(CONFIG);
 
 // create user test
-export var createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassword(email, pass)
+window.createUser = (email, pass) => firebase.auth().createUserWithEmailAndPassword(email, pass)
     .then(() => console.log("created new user", email))
     .catch(function(error) {
     // Handle Errors here.
@@ -16,7 +16,7 @@ export var createUser = (email, pass) => firebase.auth().createUserWithEmailAndP
 
 // login user test
 
-export var logIn = (email, pass) => firebase.auth().signInWithEmailAndPassword(email, pass)
+window.logIn = (email, pass) => firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(() => console.log("logged into", email))
     .catch(function(error) {
     // Handle Errors here.
