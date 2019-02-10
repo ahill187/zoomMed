@@ -2,20 +2,56 @@
 <html>
 
 <head>
+	<link rel="stylesheet" type="text/css" href="css/application.css">
+	<link rel="stylesheet" type="text/css" href="css/booking.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<script src="js/auth.js"></script>
   <title> ZOOMED | Contact Us </title>
 </head>
 
 <body>
-  <nav>
-		<a href="./index.html"> Home </a>
-		<a href="./booknow.html"> Book now </a>
-		<a href="login_patients.html"> Log In </a>
-		<a href="./contact.html"> Contact </a>
-</nav>
+</header>
+<header class="navbar navbar-custom">
+	<div class="container navbar-objects">
 
-<h1>Contact</h1>
+		<nav>
+			<ul class="nav pull-right" id="navbar-options">
+				<li><a href="./index.html"> Home </a></li>
+				<li><a href="./booknow.html"> Book now </a></li>
+				<li><a href="./login_patients.html"> Log In </a></li>
+				<li><a href="./contact.html"> Contact </a></li>
 
-<p>We are always looking for feedback to improve our service. Please fill the form below, and we will respond as soon as possible. </p>
+			</ul>
+		</nav>
+	</div>
+</header>
 
+<form action="/contactform.html" method="POST">
+	<div class="card contact">
+		<h5 class="card-header">Contact Us</h5>
+		<div class="card-body">
+			<p>We are always looking for feedback to improve our service. Please fill the form below, and we will respond as soon as possible. </p>
+
+			<form>
+				<div class="form-group">
+					<label for="email">Name</label>
+					<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Name" required>
+				</div>
+				<div class="form-group">
+					<label for="user-pw">Email Address</label>
+					<input type="password" class="form-control" id="user-pw" placeholder="Email" required>
+				</div>
+				<div class="form-group">
+					<label for="exampleFormControlTextarea1">Message</label>
+					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary login" value="Log In" onclick="">
+					<a href="./booknow.html"> Contact Us </a></button>
+			</form>
+		</div></div>
+
+
+</form>
 </body>
 </html>
