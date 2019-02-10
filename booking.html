@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> ZOOMED | Bookings </title>
+</head>
+
+<body>
+  <nav>
+    <a href="./medical-home.html"> Home </a>
+    <a href="./medical-booknow.html"> Book now </a>
+    <a href="./medical-contact.html"> Contact </a>
+</nav>
+
+<h1>Bookings</h1>
+<p> Please complete the form below to find a health provider!</p>
+
+<form action="/bookingform.html" method="POST">
+    <h1>Symptoms</h1>
+        <p>The entries will be used by practioners to promptly assess your condition.</p>
+          <label for="painlevel">On a scale, how much pain are you feeling?</label>
+          <br>
+          <span>Low</span>
+            <input type="range" name="painlevel" id="painlevel" min="0" max="5" step="0.5">
+          <span>High</span>
+
+    <h1>Practioners</h1>
+      <p>The entries will be used to match you to a optimal and preferred health care provider.</p>
+      <span>Do you have a preferred gender for the practioner?</span> 
+      </br>
+        <input type="radio" name="p-gender" id="p-gender" value="female">
+          <label for="female">Female</label>
+        <input type="radio" name="p-gender" id="p-gender" value="male">
+          <label for="male">Male</label>
+        <input type="radio" name="p-gender" id="p-gender" value="nopref">
+          <label for="nopref">No Preference</label>
+
+
+</form>
+
+</body>
+</html>
