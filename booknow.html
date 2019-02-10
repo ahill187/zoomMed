@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> ZOOMED | Bookings </title>
+</head>
+
+<body>
+  <nav>
+		<a href="./index.html"> Home </a>
+		<a href="./booknow.html"> Book now </a>
+		<a href="./login.html"> Log In </a>
+		<a href="./contact.html"> Contact </a>
+</nav>
+
+<h1>Bookings</h1>
+<p> Please complete the form below to find a health provider!</p>
+
+<form action="/bookingform.html" method="POST">
+    <h1>Symptoms</h1>
+        <p>The entries will be used by practioners to promptly assess your condition.</p>
+    </br>
+      <label for="symptoms">Please list the symptoms you are experiencing.</label>
+    </br>
+     <textarea id="symptoms" name="symptoms" rows="5" cols="80"></textarea>
+  </br>
+      <label for="insurance">Are you covered by insurance?</label>
+        <input type="radio" name="insurance" id="insurance" value="yes">
+      <label for="yes">Yes</label>
+        <input type="radio" name="insurance" id="insurance" value="no">
+      <label for="no">No</label>
+    </br>
+
+    <h1>Practioners</h1>
+      <p>The entries will be used to match you to a optimal and preferred health care provider.</p>
+      <span>Do you have a preferred gender for the practioner?</span> 
+        <input type="radio" name="p-gender" id="p-gender" value="female">
+          <label for="female">Female</label>
+        <input type="radio" name="p-gender" id="p-gender" value="male">
+          <label for="male">Male</label>
+        <input type="radio" name="p-gender" id="p-gender" value="nopref">
+          <label for="nopref">No Preference</label>
+    </br>
+        <label for="currentlocation">What is the address of your current location?:</label>
+    <input type="text" name="currentlocation" id="currentlocation">
+          
+  </br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
