@@ -3,6 +3,15 @@
 //     end: 1400
 // } for time objects
 
+export var chooseBestSched = async (db, patient, currentTime) => {
+    var patientObj = db.collection("patients").doc('USREMAIL')    
+    let doc = await patientObj.get()
+    if (doc.exists) {var patientObj = doc.data()}
+   // var patientdata ...
+
+}
+
+
 function addSchedule(patient, clinic, doctor, time){
 
     // get schedule for clinic from doctor
