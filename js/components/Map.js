@@ -16,11 +16,11 @@ export const initGoogleMaps = () => {
 		if (doc.exists) { var zenClinic = doc.data()}
 		var zenLoc = {lat: zenClinic.location._lat, lng: zenClinic.location._long}
 		
-		// var getem = await db.collection("clinics").get()
-		// console.log(getem)
-		// for (doc in getem) {
-		// 	console.log(doc)
-		// }
+		var getem = await db.collection("clinics").get()
+		console.log(getem)
+		for (doc in getem) {
+			console.log(doc)
+		}
 
 		var gotem = await db.collection("patients").get()
 		console.log(gotem)
@@ -62,11 +62,11 @@ export const initGoogleMaps = () => {
 		var clinicMarker = require('../../assets/symbolsmol.png')//'assets/symbol.png'
 		var map = new google.maps.Map(document.getElementById('map'), {
 			center: startloc,
-			zoom: 15
+			zoom: 14
 		})
 		var marker = new google.maps.Marker({
 			position: startloc,
-			icon: '../../assets/personformap.png' ,
+			icon: require('../../assets/personsmol.png'),
 			map: map
 		})
 		var markerZen = new google.maps.Marker({position: zenLoc, icon: clinicMarker, map: map, title: 'Zen Clinic'});
