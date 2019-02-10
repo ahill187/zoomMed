@@ -33,6 +33,52 @@ db.collection("patients").doc("darkchild69@vt.edu").get()
 	})
 	.catch(err => console.log(err))
 
+	db.collection("patients").doc("healthyhumanbean@vt.edu").get()
+	.then(doc => {
+		if (doc.exists) {
+			console.log("already exists")
+		} else {
+			db.collection("patients").doc("healthyhumanbean@vt.edu").set({
+				firstName: "John",
+				lastName: "Mcbain",
+				gender: "male",
+				insured: false,
+				symptoms: ["neck pain"],
+				homeLocation: new fb.firestore.GeoPoint(49.262644, -123.208380),
+			})
+			.then(docRef => {
+				console.log("Document written with ID: ", docRef.id);
+			})
+			.catch(error => {
+				console.error("Error adding document: ", error);
+			})
+		}
+	})
+	.catch(err => console.log(err))
+
+	db.collection("patients").doc("sickystylez@vt.edu").get()
+	.then(doc => {
+		if (doc.exists) {
+			console.log("already exists")
+		} else {
+			db.collection("patients").doc("sickystylez@vt.edu").set({
+				firstName: "Mannah",
+				lastName: "Hontana",
+				gender: "female",
+				insured: true,
+				symptoms: ["medium sized flesh wound"],
+				homeLocation: new fb.firestore.GeoPoint(49.268612, -123.174661),
+			})
+			.then(docRef => {
+				console.log("Document written with ID: ", docRef.id);
+			})
+			.catch(error => {
+				console.error("Error adding document: ", error);
+			})
+		}
+	})
+	.catch(err => console.log(err))
+
 // example clinic
 
 db.collection("clinics").doc("zenclinic1234567@gmail.com").set({
