@@ -1,0 +1,172 @@
+
+/* universal */
+
+:root {
+    --color-a: #2EC4B6;
+    --color-b: #FF6666;
+    --color-c: #CCFF66;
+    --color-d: #4C88C7;
+    --color-b-light: #8FE9F7;
+    --color-c-light: #d4f298;
+    --color-b-transparent: rgba(143,233,247,0.5);
+    --color-a-opqaue: rgba(255,89, 146, 1);
+    --color-a-transparent: rgba(255, 89,146, 0.14);
+    --color-e: #4CDEF5;
+    --grey-transparent: rgba(211, 211, 211, 0.3);
+    --text-color-dark: rgb(50,50,50);
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background-color: var(--color-c-light) !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 16px;
+}
+
+section {
+    overflow: auto;
+}
+
+textarea {
+    resize: vertical;
+}
+
+header {
+    padding: 0px;
+}
+
+.navbar-custom {
+    background-color: var(--color-d);
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,1);
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: rgba(255,255,255,1);
+}
+
+.navbar-objects {
+    padding: 20px;
+    padding-bottom: 10px;
+
+}
+.navbar {
+    color: rgba(255,255,255,1) !important;
+    text-shadow: none !important;
+    margin-bottom: 0px !important;
+}
+
+#navbar-options {
+    color: rgba(255,255,255,1) !important;
+    text-shadow: none !important;
+}
+
+.navbar .nav > li > a {
+    color: rgba(255,255,255,1) !important;
+    text-shadow: none !important;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center h1 {
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: rgba(255,255,255,1);
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+#main-title {
+    color: var(--color-a);
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 120px;
+    padding-right: 200px;
+    margin-right: 200px;
+    list-style: none;
+
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 60px;
+    font-size: 26px;
+
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color-dark);
+    font-weight: bold;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: var(--color-a);
+}
+
+.sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav>.sidebar-brand {
+    height: 65px;
+    font-size: 24px;
+    line-height: 60px;
+}
+
+.sidebar-nav>.sidebar-brand a {
+    color: var(--color-a);
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+

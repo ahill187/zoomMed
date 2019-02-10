@@ -2,16 +2,29 @@
 <html>
 
 <head>
-  <title> ZOOMED | Bookings </title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/application.css">
+    <link rel="stylesheet" type="text/css" href="css/booking.css">
+
+    <title> ZOOMED | Bookings </title>
 </head>
 
 <body>
-  <nav>
-		<a href="./index.html"> Home </a>
-		<a href="./booknow.html"> Book now </a>
-		<a href="./login.html"> Log In </a>
-		<a href="./contact.html"> Contact </a>
-</nav>
+<header class="navbar navbar-custom">
+    <div class="container navbar-objects">
+
+        <nav>
+            <ul class="nav pull-right" id="navbar-options">
+                <li><a href="./index.html"> Home </a></li>
+                <li><a href="./booknow.html"> Book now </a></li>
+                <li><a href="./login.html"> Log In </a></li>
+                <li><a href="./contact.html"> Contact </a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
 
 <h1>Bookings</h1>
 <p> Please complete the form below to find a health provider!</p>
@@ -33,19 +46,134 @@
 
     <h1>Practioners</h1>
       <p>The entries will be used to match you to a optimal and preferred health care provider.</p>
-      <span>Do you have a preferred gender for the practioner?</span> 
-        <input type="radio" name="p-gender" id="p-gender" value="female">
-          <label for="female">Female</label>
-        <input type="radio" name="p-gender" id="p-gender" value="male">
-          <label for="male">Male</label>
-        <input type="radio" name="p-gender" id="p-gender" value="nopref">
-          <label for="nopref">No Preference</label>
-    </br>
+      <span>Do you have a preferred gender for the practioner?</span>
+
+    <form>
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <fieldset class="form-group">
+            <div class="row">
+                <legend class="col-form-label col-sm-2 pt-0">Gender of Doctor</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="female">
+                        <label class="form-check-label" for="gridRadios1">
+                            Female
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="male">
+                        <label class="form-check-label" for="gridRadios2">
+                            Male
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="nopref" checked>
+                        <label class="form-check-label" for="gridRadios3">
+                            No preference
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+        <div class="form-group row">
+            <div class="col-sm-2">Checkbox</div>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck1">
+                    <label class="form-check-label" for="gridCheck1">
+                        Example checkbox
+                    </label>
+                </div>
+            </div>
+        </div>
+
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Apt/Suite" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <input type="text" class="form-control" id="validationCustom02" placeholder="Street Number" value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid city.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Postal Code" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid zip.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                        You must agree before submitting.
+                    </div>
+                </div>
+            </div>
+
+
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                    var forms = document.getElementsByClassName('needs-validation');
+                    // Loop over them and prevent submission
+                    var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                    });
+                }, false);
+            })();
+        </script>
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+            </div>
+        </div>
+    </form>
+
         <label for="currentlocation">What is the address of your current location?:</label>
     <input type="text" name="currentlocation" id="currentlocation">
-          
-  </br>
-    <input type="submit" value="Submit">
 </form>
 
 </body>

@@ -25,6 +25,7 @@ const actions = {
 	down: () => state => ({ count: state.count - 1 }),
 	up: () => state => ({ count: state.count + 1 }),
 	map: () => state => {
+		initMap(firebase.firestore(), google)
 		return { mapping: true }
 	},
 	loadMap: () => state => { 
@@ -43,7 +44,6 @@ const view = (state, actions) => (
 		<button onclick={() => actions.up()}>＋</button>
 		<button onclick={() => actions.map()}>map</button>
 		<div id="map"></div>
-		{ state.mapping ? initMap(google) : '' }
 	</div>
 )
 
