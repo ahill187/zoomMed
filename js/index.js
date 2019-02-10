@@ -14,8 +14,11 @@ window.db = firebase.firestore()
 
 window.dbAdd = addToDb
 
-window.initMap = console.log(google)
-
+window.initMap = () => { 
+	if (!google) { 
+		console.log("google not present, restart") 
+	} 
+}
 const state = {
 	count: 0,
 	time: -1,
@@ -38,6 +41,7 @@ const actions = {
 }
 
 window.loadMap = actions.loadMap
+
 
 const view = (state, actions) => (
 	<div>
