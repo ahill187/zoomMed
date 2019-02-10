@@ -6,7 +6,7 @@ import { h, app } from 'hyperapp'
 import { CONFIG } from './config'
 import { addToDb } from './database'
 import { initMap } from './components/Map'
-import Account from './accounts'
+import { dateConvert } from './util'
 
 firebase.initializeApp(CONFIG)
 
@@ -21,6 +21,7 @@ window.initMap = () => {
 }
 const state = {
 	count: 0,
+	time: -1,
 	mapping: false,
 	mapLoaded: false,
 }
@@ -36,6 +37,7 @@ const actions = {
 		console.log("YATE")
 		return { mapLoaded: true } 
 	},
+	setTime: (time) => state => ({ time: time })
 }
 
 window.loadMap = actions.loadMap
@@ -45,11 +47,16 @@ const view = (state, actions) => (
 	<div>
 		<p>bizza</p>
 		{state.count}
+		{state.time}	
 		<button onclick={() => actions.down()}>ー</button>
 		<button onclick={() => actions.up()}>＋</button>
 		<button onclick={() => actions.map()}>map</button>
+		<button onclick={() => actions.setTime(Date.now)}>Set Time</button>
 		<div id="map"></div>
 	</div>
-)
+	)
+
+	// var newTime = dateConvert(state.time)
+	// console.log(newTime)
 
 app(state, actions, view, document.body)
