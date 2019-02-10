@@ -97,6 +97,7 @@ h1 {
     margin-bottom: 30px;
     text-align: center;
     padding-bottom: 40px;
+    color: var(--color-c);
 }
 
 h2 {
@@ -114,7 +115,7 @@ p {
 }
 
 #main-title {
-    color: var(--color-a);
+    color: var(--color-d);
 }
 
 /* Sidebar Styles */
@@ -176,6 +177,10 @@ p {
  }
 .btn-primary {
     background-color: var(--color-d) !important;
+}
+/* change the color of active or hovered links */
+a:hover, a.active, a {
+    color: rgba(255,255,255,1) !important;
 }
 
 
